@@ -1,3 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
 body {
 	margin: 0px;
 	border: 0px;
@@ -8,33 +10,137 @@ body {
 	font-size:16px;
 }
 
-.hidden{
-    display: none;
+#game-boards {
+	width: 100%;
+	text-align: center;
 }
 
-.gorillazlogo{
-    margin-left: 800px;
+
+
+.puzzle-pieces {
+    float: left;
+    margin-top: 40px;
+	height: 800px;
+    width: 450px;
+	
+	border: medium solid #333;
+	
+	color: inherit;
+	overflow: hidden;
 }
 
-.center{
-    text-align: center;
+.puzzle-board { 
+	
+	margin-top: 50px;
+	height: 800px;
+    width: 450px;
+	
+	border: medium solid #333;
+	
+	color: inherit;
+   overflow: hidden;
+    float: right;
 }
 
-.drop-zone{
+.puzzle-image {
+	width: 200px;
+	
+	padding: 8px;
+	cursor: pointer;
+}
+
+
+
+.drop-zone {
     width: 200px;
     height: 200px;
     border: thin dashed white;
 	position: relative;
+	flex-direction: row;
+	overflow: hidden;
 }
 
-.drop-board {
-	margin-top: 40px;
-	height: 400px;
-    width: 600px;
-	display: inline-block;
-	border: medium solid #333;
-	background-color: #000;
-	color: inherit;
-    text-align: center;
+.drop-zone img {
+ width: 95% !important;
+ float: none;
+ 
+ padding: 0;
+}
+
+.tl img{
+	right: 0;
+	bottom: 0;
+}
+.tr img{
+	bottom: 0;
+}
+.bl img{
+	right: 0;
+}
+
+
+header {
+	position: relative;
+	top: 20px;
+	width:600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 3.25em;
+  letter-spacing: 3px;
+	margin: 10px 0
+}
+
+header p, footer p { font-size: 1.7em; letter-spacing: 2px; margin: 10px 0 }
+
+footer {
+	position: relative;
+	top: 65px;
+	width:600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#buttonHolder {
+	margin: 0px auto;
+	text-align:center;
+}
+
+#buttonHolder img {
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 20px;
+	border: thin solid #333;
+	cursor: pointer;
+}
+
+#buttonHolder img:hover {
+	opacity:.5;
+}
+.gorillaz{
+    float: left; 
+    margin-left: 170px;
+    margin-top: -90px;
+    width: 800px;
+    align-items: center;
+}
+.logo{
+    width: 300px;
+    align-items: center ;
+}
+
+
+.A{
+	float: left;
+}
+.B{
+	margin-left: 200px;
+	overflow: hidden;
+}
+.C{
+	margin-left: 100px;
 	
 }
+
