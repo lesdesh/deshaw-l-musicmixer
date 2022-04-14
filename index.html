@@ -2,38 +2,70 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Drag and Drop Puzzle Game</title>
+	<title>Gorillaz Music Maker</title>
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<header id="headLine">
-		<h1 class="hidden">Gorillaz Music Mixer</h1>
-		<img class="gorillazlogo" src="images/gorillazlogo.png" width="350px">
-		<h3 class="center">Help The Gorillaz remix their song!</h3>
+		<img class="logo" src="images/gorillazlogo.png">
+		
 	</header>
+
 	
-	<section>
-		<div class="drag">
-			<img src="images/200x200.png" class="dragimage"  alt="top left">
-			<img src="images/200x200.png" class="dragimage"  alt="top right">
+	<section id="game-boards">
+		<audio id="bass" src="audio/gorillaz-bass.mp3" autoplay="autoplay"></audio>
+		<audio id="guitar" src="audio/gorillaz-guitar.mp3" autoplay="autoplay"></audio>
+		<audio id="vocals" src="audio/gorillaz-mic.mp3" autoplay="autoplay"></audio>
+		<audio id="drums" src="audio/gorillaz-drums.mp3" autoplay="autoplay"></audio>
+		<audio id="synth" src="audio/gorillaz-synth.mp3" autoplay="autoplay"></audio>
+		<!-- these are the draggable pieces -->
+		<div class="puzzle-pieces">
+			<div>
+			<img id="topLeft" draggable="true" src="images/guitar.jpg" data-trackref="gorillaz-guitar" class="puzzle-image"  alt="top left">
+			<img id="topRight" draggable="true" src="images/drums.jpg" data-trackref="gorillaz-drums" class="puzzle-image"  alt="top right">
+			</div>
+			<div>
+			<img id="bottomLeft" draggable="true" src="images/keys.jpg" data-trackref="gorillaz-synth" class="puzzle-image"  alt="bottom left">
+			<img id= "bottomRight" draggable="true" src="images/bass.jpg" data-trackref="gorillaz-bass" class="puzzle-image" alt="bottom right">
+			</div>
+			<div>
+				<img id="bottomLeft" draggable="true" src="images/mic.jpg" data-trackref="gorillaz-vocals" class="puzzle-image"  alt="solo">
+			</div>
 		</div>
+		
 		<div>
-			<img src="images/200x200.png" class="dragimage"  alt="bottom left">
-			<img src="images/200x200.png" class="dragimage" alt="bottom right">
+			<img class ="gorillaz" src="images/gorillaz.png">
 		</div>
-		<div>
-			<img src="images/200x200.png" class="dragimage"  alt="bottom left">
-		</div>
-		<!--centre dropboard and line up boxes-->
-		<div class="drop-board">
-			<div class="drop-zone 1"></div>
-			<div class="drop-zone 2"></div>
-			<div class="drop-zone 3"></div>
-			<div class="drop-zone 4"></div>
-			<div class="drop-zone 5"></div>
+
+
+		<!-- we want to drop the draggable pieces here -->
+		
+		<div class="puzzle-board">
+			
+				<div class="A">
+				<div class="drop-zone 1"></div>
+				<div class="drop-zone 2"></div>
+				</div>
+	
+				<div class="B">
+				<div class="drop-zone 3"></div>
+				<div class="drop-zone 4"></div>
+				</div>
+	
+				<div class="C">
+				<div class="drop-zone 5"></div>
+			</div>
+		
 	</div>
+
 	</section>
+
+	<footer>
+		
+		
+	</footer>
+
 	<script src="js/main.js"></script>
 </body>
 </html>
